@@ -1,2 +1,9 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<% @books.each do |book| %>
+<div>
+  <p><%= image_tag 'sample-author1.jpg' %></p>
+  <p><%= book.user.name %></p>
+  <p><%= book.title %></p>
+  <p><%= book.body %></p>
+</div>
+<% end %>
+
