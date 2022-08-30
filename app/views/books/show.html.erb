@@ -1,9 +1,6 @@
-<% @book.each do |book| %>
 <div>
-  <%= image_tag post_image.get_image %>
   <p><%= image_tag 'sample-author1.jpg' %></p>
-  <p><%= post_image.user.name %></p>
-  <p><%= post_image.title %></p>
-  <p><%= post_image.body %></p>
+  <p><%= @book.user.name %></p>
+  <p><%= @book.title %></p>
+  <p><%= @book.body %></p>
 </div>
-<% end %>

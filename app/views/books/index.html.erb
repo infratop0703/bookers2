@@ -4,5 +4,7 @@
   <p><%= book.user.name %></p>
   <p><%= book.title %></p>
   <p><%= book.body %></p>
+
+  <%= link_to "show",book_path(book.id) %>
 </div>
 <% end %>
