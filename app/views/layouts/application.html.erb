@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://kit.fontawesome.com/ef6a974a90.js" crossorigin="anonymous"></script>
     <title>Bookers2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -49,7 +50,8 @@
       </nav>
     </header>
     <main class="mb-auto">
-    <%= yield %>
+      <p id="notice"></p>
+      <%= yield %>
     </main>
     <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container mt-5">
