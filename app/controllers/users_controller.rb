@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :correct_user,   only: [:edit, :update]
+  
+
   def show
     @book_new = Book.new
     @user = User.find(params[:id])
