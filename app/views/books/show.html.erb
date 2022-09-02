@@ -17,12 +17,14 @@
             </td>
             <td><%= @book.title %></td>
             <td><%= @book.body %></td>
-            <td>
-              <%= link_to("edit", edit_book_path(@book.id),{class: "btn btn-sm btn-success" }) %>
-            </td>
-            <td>
-              <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_31354" rel="nofollow" data-method="delete">Destroy</a>
-            </td>
+            <% if @book.user == current_user %>
+              <td>
+                <%= link_to("edit", edit_book_path(@book.id),{class: "btn btn-sm btn-success" }) %>
+              </td>
+              <td>
+                <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_31354" rel="nofollow" data-method="delete">Destroy</a>
+              </td>
+            <% end %>
 
           </tr>
         </tbody>
