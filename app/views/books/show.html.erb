@@ -6,8 +6,8 @@
   <div class="row">
 
     <div class="col-md-3">
-       <%= render 'users/list', user: @user %>
-       <%= render 'books/list', book: @book %>
+       <%= render 'users/list', user: @users %>
+       <%= render 'books/list', book: @book_new %>
     </div>
 
     <div class="col-md-8 offset-md-1">
@@ -16,12 +16,16 @@
         <tbody>
           <tr>
             <td>
-              <%= image_tag @user.get_profile_image(100,100) %><br>
-              <%= link_to @book.user do %>
+              <%= link_to user_path(@book.user) do %>
+                <%= image_tag @book.user.get_profile_image(100,100) %><br>
                 <%= @book.user.name %>
               <% end %>
             </td>
-            <td><%= @book.title %></td>
+            <td>
+              <%= link_to book_path(@book) do %>
+                <%= @book.title %>
+              <% end %>
+            </td>
             <td><%= @book.body %></td>
             <% if @book.user == current_user %>
               <td>
