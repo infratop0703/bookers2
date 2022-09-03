@@ -27,48 +27,48 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
               <li class="nav-link text-light">
-                <i class="fa-solid fa-house-user"></i><%= link_to "Home", user_path(current_user.id) %>
+                <i class="fas fa-solid fa-home"></i><%= link_to "Home", user_path(current_user.id) %>
               </li>
               <li>
                 <a class="nav-link text-light" href="/users">
-                  <i class="fa-solid fa-users"></i>
+                  <i class="fas fa-solid fa-users"></i>
                   Users
                 </a>
               </li>
               <li>
                 <a class="nav-link text-light" href="/books">
-                  <i class="fa-solid fa-book-open"></i>
+                  <i class="fas fa-solid fa-book-open"></i>
                   Books
                 </a>
               </li>
               <li>
                 <a class="nav-link text-light" data-method="delete" href="/users/sign_out",>
-                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <i class="fas fa-solid fa-sign-out-alt"></i>
                   Log out
                 </a>
               </li>
               <% else %>
               <li>
                 <a class="nav-link text-light" href="/">
-                  <i class="fa-solid fa-house-user"></i>
+                  <i class="fas fa-solid fa-home"></i>
                   Home
                 </a>
               </li>
               <li>
                 <a class="nav-link text-light" href="/home/about",>
-                  <i class="fa-sharp fa-solid fa-link"></i>
+                  <i class="fas fa-sharp fa-solid fa-link"></i>
                   About
                 </a>
               </li>
               <li>
                 <a class="nav-link text-light" href="/users/sign_up",>
-                  <i class="fa-solid fa-user-plus"></i>
+                  <i class="fas fa-solid fa-user-plus"></i>
                   Sign up
                 </a>
               </li>
               <li>
                 <a class="nav-link text-light" href="/users/sign_in",>
-                  <i class="fa-solid fa-right-to-bracket"></i>
+                  <i class="fas fa-solid fa-sign-in-alt"></i>
                   Log in
                 </a>
               </li>
