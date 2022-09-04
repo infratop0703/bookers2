@@ -37,6 +37,22 @@
             <% end %>
 
             <td>
+              <% if @book.favorited_by?(current_user) %>
+                <p>
+                  <%= link_to book_favorites_path(@book), method: :delete do %>
+                    <i class="fas fa-solid fa-heart"></i><%= @book.favorites.count %>
+                  <% end %>
+                </p>
+                <% else %>
+                <p>
+                  <%= link_to book_favorites_path(@book), method: :post do %>
+                    <i class="fas fa-regular fa-heart"></i><%= @book.favorites.count %>
+                  <% end %>
+                </p>
+              <% end %>
+            </td>
+
+            <td>
               <p>コメント数：<%= @book.book_comments.count %></p>
               <% @book.book_comments.each do |book_comment| %>
                 <p><%= image_tag book_comment.user.get_profile_image(100,100) %></p>
@@ -47,8 +63,6 @@
                 <% end %>
               <% end %>
             </td>
-
-
 
           </tr>
           <tr>
