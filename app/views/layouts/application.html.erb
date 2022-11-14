@@ -26,6 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
+<<<<<<< HEAD
               <li class="nav-link text-light">
                 <i class="fas fa-solid fa-home"></i><%= link_to "Home", user_path(current_user.id) %>
               </li>
@@ -73,6 +74,50 @@
                 </a>
               </li>
 
+=======
+              <li>
+                <%= link_to user_path(current_user.id), class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-home"></i>Home
+                <% end %>
+              </li>
+              <li>
+                <%= link_to users_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-users"></i>Users
+                <% end %>
+              </li>
+              <li>
+                <%= link_to books_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-book-open"></i>Books
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, class:"nav-link text-light", method: :delete do %>
+                  <i class="fas fa-solid fa-sign-out-alt"></i>Log out
+                <% end %>
+              </li>
+              <% else %>
+
+              <li>
+                <%= link_to root_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-home"></i>Home
+                <% end %>
+              </li>
+              <li>
+                <%= link_to home_about_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-sharp fa-solid fa-link"></i>About
+                <% end %>
+              </li>
+              <li>
+                <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-user-plus"></i>Sign up
+                <% end %>
+              </li>
+              <li>
+                <%= link_to new_user_session_path, class:"nav-link text-light" do %>
+                  <i class="fas fa-solid fa-sign-in-alt"></i>Log in
+                <% end %>
+              </li>
+>>>>>>> da1d420 (ヘッダーリンク記述(link to ~ end に変更)
               <% end %>
               </ul>
           </div>

@@ -48,7 +48,11 @@ class BooksController < ApplicationController
       flash[:notice] ="You have updated book successfully."
       redirect_to book_path
     else
+<<<<<<< HEAD
       render :edit
+=======
+      
+>>>>>>> da1d420 (ヘッダーリンク記述(link to ~ end に変更)
     end
   end
 
